@@ -30,19 +30,19 @@ public class Student {
     }
 
     public int getSid() {
-        return sid;
+        return this.sid;
     }
 
     public String getSname() {
-        return sname;
+        return this.sname;
     }
 
     public String getSphone() {
-        return sphone;
+        return this.sphone;
     }
 
     public String getSdept() {
-        return sdept;
+        return this.sdept;
     }
 
     public static Student studentInfo(BufferedReader read) throws IOException {
