@@ -1,0 +1,21 @@
+#1 exceptions
+java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:383)
+	at java.base/java.lang.Class.forName(Class.java:376)
+	at com.student.manage.Connector.connect(Connector.java:10)
+	at com.student.manage.StudentDao.display(StudentDao.java:52)
+	at Main.main(Main.java:45)
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "con" is null
+	at com.student.manage.StudentDao.display(StudentDao.java:55)
+	at Main.main(Main.java:45)
+
+#2 SSL connection
+Tue May 16 09:52:33 IST 2023 WARN:
+Establishing SSL connection without server's identity verification is not recommended.
+According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set.
+For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'.
+You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.

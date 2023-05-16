@@ -1,9 +1,6 @@
 package com.student.manage;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 public class StudentDao {
     public static boolean insert(Student st) {
@@ -68,7 +65,7 @@ public class StudentDao {
                     System.out.println("----------------------------------------------");
                 }
             }
-        } catch(Exception e){
+        } catch(NullPointerException | SQLException e){
             e.printStackTrace();
         }
     }

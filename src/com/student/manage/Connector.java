@@ -1,6 +1,7 @@
 package com.student.manage;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class Connector {
     static Connection con;
@@ -13,7 +14,7 @@ public class Connector {
             String pass = "root";
 
             con = DriverManager.getConnection(url,user,pass);
-        } catch (Exception e){
+        } catch (ClassNotFoundException | SQLException e){
             e.printStackTrace();
         }
         return con;

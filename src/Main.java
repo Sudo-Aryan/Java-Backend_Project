@@ -19,7 +19,7 @@ public class Main {
             int choice;
             try {
                 choice = Integer.parseInt(read.readLine());
-            } catch (Exception e){
+            } catch (NumberFormatException e){
                 System.out.print("Thanks for using my app!!!");
                 break;
             }
